@@ -24,8 +24,19 @@ Attributes X1 to X6 indicate the responses for each question and have values fro
 
 - Predicting if a customer is happy or not based on the answers they give to questions asked.
 
-#### Solution with metrics:
+#### Bonus:
 
-- Reached more than 73% accuracy score even with small dataset. Here what we see is that the classical ML model works better than the Neural Network model because of size of data set which is small and neural networks perform better for larger amount of data. And Random forest performs the best as it is based on a series of decision trees reducing overfitting and not massively increasing error due to bias.
+- We are very interested in finding which questions/features are more important when predicting a customer’s happiness. Using a feature selection approach show us understand what is the minimal set of attributes/features that would preserve the most information about the problem while increasing predictability of the data we have.
+  
+#### Solution employed with metrics:
 
-- Also found which features are more important when predicting a customer’s happiness. Using a feature selection approach, it was shown what the minimal set of attributes/features that would preserve the most information about the problem while increasing predictability of the data we have.
+- **EDA**
+  - I first explored the data to gain insights. This included assessing the balance of the data and how many entries we have and how many features. This exploration showed there was no missing data. I then looked at histograms of the distribution of each of the features to better understand the dataset, as well as analyzed the feature importance for each 6 features.
+
+- **Model building**
+  - I then built several models: Logistic regression, KNN, Decision tree, Random forest, Gradient boosting, and XGboost. I trained these models using using training data (randomly selected from the whole dataset) at both a 80% and 75% split. I also trained these models using scaled and unscaled data. Finally I tried dropping one or two feature(s) to see if it improved the results of the model 
+
+- **Metrics and results** - 
+  - Reached more than 73% accuracy score even with small dataset. Here what we see is that the classical ML model works better than the Neural Network model because of size of data set which is small and neural networks perform better for larger amount of data. And Random forest performs the best as it is based on a series of decision trees reducing overfitting and not massively increasing error due to bias.
+
+  - Also found which features are more important when predicting a customer’s happiness. Using a feature selection approach, it was shown what the minimal set of attributes/features that would preserve the most information about the problem while increasing predictability of the data we have.
